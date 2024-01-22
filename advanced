@@ -1,0 +1,26 @@
+
+
+Formatted string
+
+
+# any type
+
+s := fmt.Sprintf("I am %v years old", 10)
+
+# string
+
+s := fmt.Sprintf("I am %s years old", "way too many")
+
+# digit
+
+s := fmt.Sprintf("I am %d years old", 10)
+
+# floating
+
+s := fmt.Sprintf("I am %f years old", 10.523)
+// I am 10.523000 years old
+
+// The ".2" rounds the number to 2 decimal places
+s := fmt.Sprintf("I am %.2f years old", 10.523)
+// I am 10.52 years old
+
