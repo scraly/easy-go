@@ -17,7 +17,7 @@ const myConst = "Hello you"
 
 ```go
 const (
-	myString = "hello"
+	myConstString = "hello"
     myBool = true
 )
 ```
@@ -28,4 +28,10 @@ const (
 const firstName = "Aurelie"
 const lastName = "Vache"
 const fullName = firstName + " " + lastName
+```
+
+## Display a constant
+
+```go
+fmt.Println(myConstString)
 ```

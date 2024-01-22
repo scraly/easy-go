@@ -19,7 +19,15 @@ if age > 6 {
 } 
 ```
 
-## If  (and multiple) else
+## If with several conditions
+
+```go
+if name == "myName" && isActiveUser {
+    //...
+}
+```
+
+## If (and multiple) else
 
 ```go
 if height > 6 {

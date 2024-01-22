@@ -29,3 +29,8 @@ We can declare one or several variables in a single line.
 name, age := "Aurelie", 39
 ```
 
+## Display a variable
+
+```go
+fmt.Println(myString)
+```
