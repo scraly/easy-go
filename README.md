@@ -13,6 +13,9 @@ This repository aim to help people to understand Go/Golang programming language,
 
 TODO:
 9. [08-slice](./concepts/08-slice.md)
+
+TODO: range et delete...
+
 9. [09-map](./concepts/09-map.md)
 9. [10-struct](./concepts/10-struct.md)
 9. [11-interface](./concepts/11-interface.md)

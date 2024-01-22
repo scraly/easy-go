@@ -86,3 +86,24 @@ func myFunction(length, age, size int) (int, error) {
 	return length+size, nil
 }
 ```
+
+## Declare a function with variadic arguments
+
+"..." syntax -> spread operator
+
+```go
+func concat(strs ...string) string {
+    final := ""
+    // strs is just a slice of strings
+    for _, str := range strs {
+        final += str
+    }
+    return final
+}
+
+func main() {
+    final := concat("Hello ", "there ", "friend!")
+    fmt.Println(final)
+    // Output: Hello there friend!
+}
+```
