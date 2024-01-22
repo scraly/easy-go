@@ -65,3 +65,9 @@ elem = myMap[key]
 delete(timeZone, "PDT")
 ```
 
+## Nested
+
+Maps can contains maps, creating a nested structure.
+
+map[string]map[string]int
+
