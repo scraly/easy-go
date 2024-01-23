@@ -1,6 +1,7 @@
 # 07-Array
 
-Arrays are fixed-size groups of variables of the same type.
+Arrays are fixed sized list of data of the same type.
+You can't change the number of elements of an array (append/add an element, delete an element).
 
 ## Declare an array of 6 integers
 
@@ -12,4 +13,16 @@ var myInts [6]int
 
 ```go
 numbers := [6]int{1, 3, 5, 9, 11, 13}
+```
+
+## Set value by index
+
+```go
+numbers[2] = 7
+```
+
+## Display the length/list of elments of an array
+
+```go
+length := len(numbers)
 ```

@@ -19,6 +19,8 @@ TODO: range et delete...
 9. [09-map](./concepts/09-map.md)
 9. [10-struct](./concepts/10-struct.md)
 9. [11-interface](./concepts/11-interface.md)
+errors
+switch-case
 
 ...
 

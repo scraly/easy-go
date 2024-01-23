@@ -18,7 +18,13 @@ Slices can includes other slices.
 talks := []string{}
 ```
 
-## Declare an array, then create a slice that contains second, third and fourth number
+## Declare a slice of int and initialize the array
+
+```go
+numbers := []int{1, 3, 5, 7, 9}
+```
+
+## Declare an array, then create a slice from the existing array that contains second, third and fourth number
 
 ```go
 primes := [6]int{1, 3, 5, 7, 9, 11}
@@ -26,7 +32,7 @@ var myNumbers []int = primes[1:4]
 fmt.Println(myNumbers)
 ```
 
-## Add one element in an existing slice / Append to a slice
+## Add one element (at the end) in an existing slice / Append to a slice
 
 ```go
 talks = append(talks, category + title)
