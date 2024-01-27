@@ -34,9 +34,37 @@ same as switch true.
 	}
 ```
 
-## xx
+## Break the switch in a for loop
 
-TODO: voir les tips du talk mistakes go pour les switch !
+```go
+for {
+	switch myFunction() {
+		case true:
+			break;
+		case false:
+			//do something
+	}
+}
+```
+
+Switch break, not the for loop
+
+## Break in switch AND break the loop
+
+Use "labeled break" to break for/switch (works for for/select too).
+
+```go
+loop:
+for {
+	switch myVar {
+		case true:
+			//do something
+		case false:
+			break loop
+	}
+
+}
+```
 
 ## Type switch
 

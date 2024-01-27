@@ -21,5 +21,7 @@ TODO: defer
 errors?
 pointers
 generics
+panic?
+for-select?
 ...
 
