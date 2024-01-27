@@ -1,4 +1,4 @@
-# 09-Maps
+# 10-Maps
 
 The zero value of a map is `nil`.
 

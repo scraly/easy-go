@@ -1,4 +1,4 @@
-# 08-Slice
+# 09-Slice
 
 A slice is a dynamically-sized, flexible view of the elements of an array.
 A slice is formed by specifying two indices, a low and high bound, separated by a colon: myArray[low : high]

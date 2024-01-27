@@ -1,4 +1,4 @@
-# 07-Array
+# 08-Array
 
 Arrays are fixed sized list of data of the same type.
 You can't change the number of elements of an array (append/add an element, delete an element).

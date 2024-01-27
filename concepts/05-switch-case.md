@@ -1,4 +1,4 @@
-# xx-Switch-Case
+# 05-Switch-Case
 
 Instead of doing a lot of if-else block, if you have several cases, a common way is to use switch-case.
 The program reads the conditions from top to bottom. When a condition is OK, switch is stopped.

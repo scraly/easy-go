@@ -1,4 +1,4 @@
-# 06-Functions
+# 07-Functions
 
 Functions in Go can take zero or more arguments.
 
