@@ -1,6 +1,5 @@
 # 10-Struct
 
-
 Collection/group of fields.
 
 # Define a struct
@@ -65,6 +64,47 @@ myGopher.Size.Width = 300
 myGopher.Size.Height = 800
 ```
 
+## Anonymous struct
 
+It's a strict without a name.
 
-TODO
+You can use anonymous struct if you will use the struct only one time for example.
+
+```go
+myCar := struct {
+  Make string
+  Model string
+} {
+  Make: "tesla",
+  Model: "model 3",
+}
+
+```
+
+## Struct method
+
+Methods can be defined on a struct.
+
+Methods are just functions that have a receiver. A receiver is a special parameter that syntactically goes before the name of the function.
+
+```go
+type rect struct {
+  width int
+  height int
+}
+
+// area has a receiver of (r rect)
+func (r rect) area() int {
+  return r.width * r.height
+}
+
+var r = rect{
+  width: 5,
+  height: 10,
+}
+
+fmt.Println(r.area())
+// prints 50
+```
+
+A receiver is just a special kind of function parameter. Receivers are important because they will, as you'll learn in the exercises to come, allow us to define interfaces that our structs (and other types) can implement.

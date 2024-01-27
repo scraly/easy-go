@@ -7,20 +7,19 @@ This repository aim to help people to understand Go/Golang programming language,
 3. [02-variable](./concepts/02-variable.md)
 4. [03-constant](./concepts/03-constant.md)
 5. [04-if-else-conditions](./concepts/04-if-else-conditions.md)
-6. [05-loop](./concepts/05-loop.md)
-7. [06-function](./concepts/06-function.md)
-8. [07-array](./concepts/07-array.md)
+6. [05-switch-case](./concepts/05-switch-case.md)
+6. [06-loop](./concepts/06-loop.md)
+7. [07-function](./concepts/07-function.md)
 
-TODO:
-9. [08-slice](./concepts/08-slice.md)
+TODO: defer
 
-TODO: range et delete...
-
-9. [09-map](./concepts/09-map.md)
-9. [10-struct](./concepts/10-struct.md)
-9. [11-interface](./concepts/11-interface.md)
-errors
-switch-case
-
+8. [08-array](./concepts/08-array.md)
+9. [09-slice](./concepts/09-slice.md)
+9. [10-map](./concepts/10-map.md)
+9. [11-struct](./concepts/11-struct.md)
+9. [12-interface](./concepts/12-interface.md)
+errors?
+pointers
+generics
 ...
 
