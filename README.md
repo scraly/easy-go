@@ -20,8 +20,11 @@ TODO: defer
 9. [12-interface](./concepts/12-interface.md)
 errors?
 pointers
+channels
+goroutines
 generics
 panic?
 for-select?
+strings subtilities (len(myString) -> utf8.RuneCountInString(myString))
 ...
 
