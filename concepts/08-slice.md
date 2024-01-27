@@ -44,13 +44,38 @@ talks = append(talks, category + title)
 talks = talks(slice, title1, title2, title3)
 ```
 
-## TODO: range
+## Range, iterate over elements of a Slice
 
-TODO: range
+Usage:
 
-## Delete one element in an existing slice
+```go
+for <INDEX>, <ELEMENT> := range <SLICE> {
+}
+```
 
-TODO:xxx
+```go
+vendors := []string{"nintendo", "sega", "sony"}
+for i, vendor := range vendors {
+    fmt.Println(i, vendor)
+}
+```
+
+## Range, iterate over elements of a Slice, display only the index
+
+```go
+for i := range attendees {
+    fmt.Println(i)
+}
+```
+
+## Range, iterate over elements of a Slice, display only the values
+
+```go
+vendors := []string{"nintendo", "sega", "sony"}
+for _, vendor := range vendors {
+    fmt.Printf("%d\n", vendor)
+}
+```
 
 ## Create dynamically-sized slice with a length equals to 5
 

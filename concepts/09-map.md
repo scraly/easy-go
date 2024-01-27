@@ -55,7 +55,7 @@ myMap[key] = elem
 submitted["Toto"] = true
 ```
 
-### Get an elem
+### Get/Retrieve an elem
 
 elem = myMap[key]
 
