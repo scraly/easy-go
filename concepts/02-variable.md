@@ -1,5 +1,20 @@
 # 02 - Variable
 
+We can declare variables in package or function level, depending of the scope you want.
+
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
+
 ## Declare a variable
 
 ```go
@@ -54,6 +69,14 @@ var (
 ```
 
 ## Display a variable
+
+Note: you have to import `fmt` package:
+
+```go
+import "fmt"
+```
+
+Then in a function:
 
 ```go
 fmt.Println(myString)
