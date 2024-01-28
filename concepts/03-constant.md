@@ -13,7 +13,7 @@ const myConst = "Hello you"
 
 /!\ Constants can't use the := short declaration syntax.
 
-## Declare several constants
+## Declare several constants in a block
 
 ```go
 const (

@@ -10,7 +10,7 @@ $ go1.21.6 version
 go version go1.21.6 linux/amd64
 ```
 
-## Use a Go version manager: G
+## Use a Go version manager: `G`
 
 For bash:
 
