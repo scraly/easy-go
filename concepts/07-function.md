@@ -108,6 +108,35 @@ func main() {
 }
 ```
 
+## Defer
+
+A `defer` statement defers the execution of a function until the surrounding function returns. 
+The deferred call's arguments are evaluated immediately, but the function call will be executed at the end of the surrounding function. 
+
+## Useful for closing function for example:
+
+```go
+
+func myFunction() {
+  //do things
+
+  response, err := http.Get(myAPIURL)
+  if err != nil {
+    return err
+  }
+  defer response.Body.Close()
+
+  //do things
+
+  //do things
+
+  // response.Body.Close() will be executed now, before `myFunction` returns
+}
+
+```
+
+Thnks to `defer` statement, we defer the execution of `response.Body.Close()` which will be executed at the end of the function.
+
 ## Anonymous function
 
 Anonymous functions are useful when you want to pass a function as an argument to another function or when you want to return a function from another function. They are also useful when you want to define a function inline without having to name it. In the following sections, we will explore how to use anonymous functions in Golang.
@@ -190,14 +219,4 @@ func timer(f func(http.ResponseWriter, *http.Request)) func(http.ResponseWriter,
 func hello(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
-```
-
-## Defer
-
- A defer statement defers the execution of a function until the surrounding function returns. 
-The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns. 
-
-TODO xx
-
-```go
 ```
