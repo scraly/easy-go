@@ -26,7 +26,31 @@ myString := "hello"
 We can declare one or several variables in a single line.
 
 ```go
-name, age := "Aurelie", 39
+var name, country string = "Aurelie", "France"
+```
+
+Note: If you define the <type> of the variables, it's only possible to define one type of variable par line.
+
+## Declare several variables, of different types, in one line
+
+We can declare one or several variables in a single line.
+
+```go
+name, age, isSeaker := "Aurelie", 39, true
+```
+
+Note that you don't have to specify the type of the variables.
+
+## Declare several variables in a block
+
+Multiple variable declarations can also be grouped together into a block (for greater readability).
+
+```go
+var (
+    name string = "Aurelie"
+    age int = 39
+    country string
+   )
 ```
 
 ## Display a variable
