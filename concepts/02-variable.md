@@ -1,19 +1,21 @@
 # 02 - Variable
 
-We can declare variables in package or function level, depending of the scope you want.
+We can declare variables at package or at function level, depending of the scope you want.
 
 ```go
 package main
 
 import "fmt"
 
-var c, python, java bool
+var name, city string
 
 func main() {
 	var i int
-	fmt.Println(i, c, python, java)
+	fmt.Println(name, i, city)
 }
 ```
+
+When you declare a variable of a type, you can't change its type but you can change its value at any time.
 
 ## Declare a variable
 
