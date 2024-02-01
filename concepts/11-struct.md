@@ -87,6 +87,8 @@ Methods can be defined on a struct.
 
 Methods are just functions that have a receiver. A receiver is a special parameter that syntactically goes before the name of the function.
 
+a method is a function associated with a specific data type (struct). A method is called on a specific variable of that type.
+
 ```go
 type rect struct {
   width int
