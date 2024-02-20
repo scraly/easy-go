@@ -33,3 +33,61 @@ The default int and uint types are just aliases that refer to their respective 3
     rune
     float64
     complex128 (never use in my life...)
+
+
+##  types of constants which are restricted to certain values and how you accomplish that in Go
+
+custom data type
+
+```go
+type SomeType string
+
+const(
+    SomeTypeA SomeType = "A"
+    SomeTypeB SomeType = "B"
+) 
+```
+
+Type definitions may be used to define different boolean, numeric, or string types and associate methods with them:
+
+```go
+type TimeZone int
+
+const (
+	EST TimeZone = -(5 + iota)
+	CST
+	MST
+	PST
+)
+
+func (tz TimeZone) String() string {
+	return fmt.Sprintf("GMT%+dh", tz)
+}
+```
+
+
+ If the type definition specifies type parameters, the type name denotes a generic type. Generic types must be instantiated when they are used.
+
+```
+type List[T any] struct {
+	next  *List[T]
+	value T
+}
+```
+
+In a type definition the given type cannot be a type parameter.
+
+```
+type T[P any] P    // illegal: P is a type parameter
+
+func f[T any]() {
+	type L T   // illegal: T is a type parameter declared by the enclosing function
+}
+```
+
+A generic type may also have methods associated with it. In this case, the method receivers must declare the same number of type parameters as present in the generic type definition.
+
+```
+// The method Len returns the number of elements in the linked list l.
+func (l *List[T]) Len() int  { … }
+```
