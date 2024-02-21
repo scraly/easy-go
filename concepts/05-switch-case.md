@@ -6,15 +6,17 @@ The program reads the conditions from top to bottom. When a condition is OK, swi
 ## Define a switch
 
 ```go
-	switch os := runtime.GOOS; os {
-	case "darwin":
-		fmt.Println("OS X.")
-	case "linux":
-		fmt.Println("Linux.")
+	switch HTTPStatusCode {
+	case 200:
+		fmt.Println("Success")
+	case 202:
+		fmt.Println("Status Accepted")
+	case 404:
+		fmt.Println("Not found!")
+	case 500:
+		fmt.Println("Internal Server Error")
 	default:
-		// freebsd, openbsd,
-		// plan9, windows...
-		fmt.Printf("%s.\n", os)
+		fmt.Println("HTTP Status Code not found")
 	}
 ```
 
@@ -23,15 +25,17 @@ The program reads the conditions from top to bottom. When a condition is OK, swi
 same as switch true.
 
 ```go
-	t := time.Now()
-	switch {
-	case t.Hour() < 12:
-		fmt.Println("Good morning!")
-	case t.Hour() < 17:
-		fmt.Println("Good afternoon.")
-	default:
-		fmt.Println("Good evening.")
-	}
+os := runtime.GOOS
+switch {
+case os == "darwin":
+	fmt.Println("goarch = amd64 or arm64")
+case os == "linux":
+	fmt.Println("goarch = amd64, arm64, ppc64le or s390x")
+case os == "freebsd", os == "netbsd", os == "openbsd", os == "windows":
+	fmt.Println("goarch = amd64")
+default:
+	fmt.Println("unknown")
+}
 ```
 
 ## Break the switch in a for loop
@@ -75,23 +79,23 @@ A type switch is like a regular switch statement, but the cases in a type switch
 Define a switch and do things depending of the type of the variable:
 
 ```go
-func doThings(input interface{}) {
+func detect(input interface{}) {
 	switch v := input.(type) {
 	case int:
-		fmt.Printf("You entered an integer: %v\n", v)
-    case bool:
-		fmt.Printf("You entered a bool: %v\n", v)
+		fmt.Printf("Integer detected: %v\n", v)
+	case bool:
+		fmt.Printf("Bool detected: %v\n", v)
 	case string:
-		fmt.Printf("You entered a string: %s (%v bytes long)\n", v, len(v))
+		fmt.Printf("String detected: %s (%v bytes)\n", v, len(v))
 	default:
-		fmt.Printf("Unknown type: %T\n", v)
+		fmt.Printf("Unknown type detected: %T\n", v)
 	}
 }
 
 func main() {
-	doThings(42)
-	doThings("hello readers")
-	doThings(true)
-    doThings(4.2)
+	detect(42)
+	detect("hello")
+	detect(true)
+	detect(3.14)
 }
 ```

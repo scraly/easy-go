@@ -1,4 +1,4 @@
-# 06-Loop
+# 06-For
 
 ## General
 

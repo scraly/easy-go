@@ -30,12 +30,12 @@ if name == "myName" && isActiveUser {
 ## If (and multiple) else
 
 ```go
-if height > 6 {
-    fmt.Println("You are super tall!")
-} else if height > 4 {
-    fmt.Println("You are tall enough!")
+if HTTPStatusCode == 200 {
+    fmt.Println("Success")
+} else if height == 404 {
+    fmt.Println("Not found!")
 } else {
-    fmt.Println("You are not tall enough!")
+    fmt.Println("HTTP Status code not implement yet")
 }
 ```
 

@@ -8,7 +8,7 @@ This repository aim to help people to understand Go/Golang programming language,
 4. [03-constant](./concepts/03-constant.md)
 5. [04-if-else-conditions](./concepts/04-if-else-conditions.md)
 6. [05-switch-case](./concepts/05-switch-case.md)
-6. [06-loop](./concepts/06-loop.md)
+6. [06-for](./concepts/06-for.md)
 7. [07-function](./concepts/07-function.md)
 
 TODO: defer
