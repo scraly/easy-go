@@ -44,29 +44,6 @@ talks = append(talks, category + title)
 talks = talks(slice, title1, title2, title3)
 ```
 
-## Range, iterate over elements of a Slice
-
-Usage:
-
-```go
-for <INDEX>, <ELEMENT> := range <SLICE> {
-}
-```
-
-```go
-vendors := []string{"nintendo", "sega", "sony"}
-for i, vendor := range vendors {
-    fmt.Println(i, vendor)
-}
-```
-
-## Range, iterate over elements of a Slice, display only the index
-
-```go
-for i := range attendees {
-    fmt.Println(i)
-}
-```
 
 ## Range, iterate over elements of a Slice, display only the values
 
@@ -98,3 +75,46 @@ mySlice := make([]int, 0, 5)
 ```go
 rows := [][]int{}
 ```
+
+## Concat two or more slices
+
+Go 1.22 new!!
+
+Starting from Go 1.22, concatenating slices is straightforward with the introduction of the slice.Concat() method. This method allows for the combination of multiple slices into a single new slice. The method signature is as follows:
+
+```go
+package main
+
+import (
+	"fmt"
+	"slices"
+)
+
+func main() {
+	s1 := []string{"James", "Wagner", "Christene", "Mike"}
+	s2 := []string{"Paul", "Haaland", "Patrick"}
+	s3 := []string{"Peter", "Mark", "Luke"}
+
+	s4 := slices.Concat(s1, s2, s3)
+	fmt.Println(s4)
+}
+```
+
+Result:
+[James Wagner Christene Mike Paul Haaland Patrick Peter Mark Luke]
+
+or
+
+```go
+
+	num1 := []int{0, 2, 4}
+	num2 := []int{6, 8}
+	num3 := []int{10, 12, 14, 16}
+
+	numbers := slices.Concat(num1, num2, num3)
+
+	fmt.Println("numbers =", numbers
+```
+
+Result:
+numbers = [0 2 4 6 8 10 12 14 16]
