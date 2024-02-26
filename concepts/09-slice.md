@@ -12,6 +12,8 @@ A nil slice has a length and capacity of 0 and has no underlying array.
 
 Slices can includes other slices.
 
+https://go.dev/blog/slices-intro
+
 ## Declare a slice of strings
 
 ```go
@@ -118,3 +120,35 @@ or
 
 Result:
 numbers = [0 2 4 6 8 10 12 14 16]
+
+## common operations on slices
+
+TODO 
+
+To read:
+
+https://go.dev/blog/slices-intro
+
+https://go.dev/blog/generic-slice-functions
+
+https://go.dev/blog/slices
+
+
+## Sort
+
+s := []string{"Bat", "Fox", "Owl", "Fox"}
+    s2 := slices.Clone(s)
+    slices.Sort(s2)
+    fmt.Println(s2) // [Bat Fox Fox Owl]
+
+## Remove non uniq values in a slice
+
+ s2 = slices.Compact(s2)
+fmt.Println(s2)                  // [Bat Fox Owl]
+
+## Test if a slice is equals to another slice
+
+    fmt.Println(slices.Equal(s, s2)) // false
+
+
+	...
